@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -51,5 +52,13 @@ public class RagDoll_PlayerController : MonoBehaviour
             hips.AddForce(hips.transform.right * strafeSpeed);
         }
 
+        if(Input.GetKey(KeyCode.Space))
+        {
+            if(isGrounded)
+            { 
+                hips.AddForce(new Vector3(0, jumpForce, 0));
+                isGrounded = false;
+            }
+        }
     }
 }
