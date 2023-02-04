@@ -11,9 +11,12 @@ namespace Coherence.Generated
 	public static class Archetypes
 	{
 		public const int ExampleCharacter_3b63255ecbc45c94189e0899a9d151a2Index = 0;
+		public const int Player_d076185600ad3c7489ff1b08d88bdda7Index = 1;
 
 		public static Dictionary<string, int> IndexForName = new Dictionary<string, int>() {
 			{ "ExampleCharacter_3b63255ecbc45c94189e0899a9d151a2", 0 },
+
+			{ "Player_d076185600ad3c7489ff1b08d88bdda7", 1 },
 
 		};
 	}

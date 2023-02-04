@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "957e2f80495ede23c71c00ac3adaee1055564d87";
+		public const string schemaId = "81d95f4aa01d99aa85c9663f9a5f7b311e384e94";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -122,6 +122,9 @@ namespace Coherence.Generated
 		public const uint InternalArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_WorldPosition_LOD0 = 102;
 		public const uint InternalArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_WorldOrientation_LOD0 = 103;
 		public const uint InternalArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_GenericScale_LOD0 = 104;
+		public const uint InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldPosition_LOD0 = 105;
+		public const uint InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldOrientation_LOD0 = 106;
+		public const uint InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_GenericScale_LOD0 = 107;
 		public const uint InternalAuthorityRequest = 0;
 		public const uint InternalAuthorityTransfer = 1;
 		public const uint InternalQuerySynced = 2;
@@ -235,6 +238,9 @@ namespace Coherence.Generated
 			{ 102, "ArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_WorldPosition_LOD0" },
 			{ 103, "ArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_WorldOrientation_LOD0" },
 			{ 104, "ArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_GenericScale_LOD0" },
+			{ 105, "ArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldPosition_LOD0" },
+			{ 106, "ArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldOrientation_LOD0" },
+			{ 107, "ArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_GenericScale_LOD0" },
 		};
 
 		public static string ComponentNameForTypeId(uint typeId)
@@ -466,6 +472,12 @@ namespace Coherence.Generated
 					return WorldOrientation.DeserializeArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_WorldOrientation_LOD0(inProtocolStream);
 				case InternalArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_GenericScale_LOD0:
 					return GenericScale.DeserializeArchetypeExampleCharacter_3b63255ecbc45c94189e0899a9d151a2_GenericScale_LOD0(inProtocolStream);
+				case InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldPosition_LOD0:
+					return WorldPosition.DeserializeArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldPosition_LOD0(inProtocolStream);
+				case InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldOrientation_LOD0:
+					return WorldOrientation.DeserializeArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_WorldOrientation_LOD0(inProtocolStream);
+				case InternalArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_GenericScale_LOD0:
+					return GenericScale.DeserializeArchetypePlayer_d076185600ad3c7489ff1b08d88bdda7_GenericScale_LOD0(inProtocolStream);
 				default:
 					return (null, 0, 0);
 			}
