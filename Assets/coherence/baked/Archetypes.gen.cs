@@ -12,11 +12,14 @@ namespace Coherence.Generated
 	{
 		public const int ExampleCharacter_3b63255ecbc45c94189e0899a9d151a2Index = 0;
 		public const int Player_d076185600ad3c7489ff1b08d88bdda7Index = 1;
+		public const int M_Pepatoes_19914e9baa5282848b7dfb54e056fe69Index = 2;
 
 		public static Dictionary<string, int> IndexForName = new Dictionary<string, int>() {
 			{ "ExampleCharacter_3b63255ecbc45c94189e0899a9d151a2", 0 },
 
 			{ "Player_d076185600ad3c7489ff1b08d88bdda7", 1 },
+
+			{ "M_Pepatoes_19914e9baa5282848b7dfb54e056fe69", 2 },
 
 		};
 	}
