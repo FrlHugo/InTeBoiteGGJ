@@ -29,21 +29,29 @@ public class PickUpToge : MonoBehaviour
 
     public void Bonsoir(Collider other)
     {
-        if (nm.index == 1 || nm.index == 2 || nm.index == 4)
+        if (nm.index == 1 || nm.index == 3 || nm.index == 4)
         {
             if (other.gameObject.tag == "Toge" || other.gameObject.tag == "Peruque" || other.gameObject.tag == "Nez")
-        {
-            nouveauTrigger = other.gameObject;
-
-            isWearingAToge = false;
-            visuelToge.SetActive(false);
-            visuelPeruque.SetActive(false);
-            visuelNez.SetActive(false);
-
-            if (other.gameObject.tag == "Toge")
             {
-                isWearingAToge = true;
-                visuelToge.SetActive(true);
+                nouveauTrigger = other.gameObject;
+
+                if (visuelNez.activeSelf)
+                {
+                    if (other.gameObject.tag == "Toge")
+                    {
+                        nm.epreuves[3].missions[0] = true;
+                    }
+                }
+
+                isWearingAToge = false;
+                visuelToge.SetActive(false);
+                visuelPeruque.SetActive(false);
+                visuelNez.SetActive(false);
+
+                if (other.gameObject.tag == "Toge")
+                {
+                    isWearingAToge = true;
+                    visuelToge.SetActive(true);
 
                     for (int i = 0; i < nm.epreuves[nm.index].missions.Count; i++)
                     {
@@ -54,8 +62,6 @@ public class PickUpToge : MonoBehaviour
                         }
                     }
                 }
-             
-
             }
 
             if (other.gameObject.tag == "Peruque")
