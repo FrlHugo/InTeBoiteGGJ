@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using PublicManaged;
 
 public class NarrateurManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class NarrateurManager : MonoBehaviour
     public EventManager em;
     public bool test = false;
 
+    public GameObject publicobject;
 
 
     void Start()
@@ -35,6 +37,12 @@ public class NarrateurManager : MonoBehaviour
         if (game)
         {
             timer += Time.deltaTime;
+
+           if( timer % 10 == 0)
+            {
+                publicobject.GetComponent<PublicManager>().React(false, 1);
+
+            }
 
             if (!start)
             {
@@ -97,6 +105,8 @@ public class NarrateurManager : MonoBehaviour
 
     private void SwitchEpreuve()
     {
+        publicobject.GetComponent<PublicManager>().React(true,3);
+
         foreach (bool mission in epreuves[index].missions)
         {
             if (!mission)
