@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9d1dd19c7f126248bd51557a9397570, type: 3}
-  m_Name: Arbres
+  m_Name: Monstre
   m_EditorClassIdentifier: 
-  phrase: Epreuve 6
-  missions: 0000000000
+  phrase: "Notre groupe restant se mit en qu\xEAte de la cr\xE9ature hybride, mi-rat
+    mi-cygne, dite l'homme rat-cygne... Il \xE9tait de leur devoir de l'\xE9loigner
+    le plus possible de l'Acropole, hors de la vue de tous les citoyens ath\xE9niens."
+  missions: 00
   time: 0

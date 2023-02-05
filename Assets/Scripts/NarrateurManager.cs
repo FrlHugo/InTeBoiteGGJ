@@ -10,6 +10,9 @@ public class NarrateurManager : MonoBehaviour
 
     public TextMeshProUGUI epreuveText;
 
+    public GameObject panel;
+    public bool game = false;
+
     public float timer = 0f;
     private bool start = false;
 
@@ -22,15 +25,18 @@ public class NarrateurManager : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
+        if (game)
+        {
+            timer += Time.deltaTime;
 
-        if (!start)
-        {
-            StartEpreuve();
-        }
-        else
-        {
-            SwitchEpreuve();
+            if (!start)
+            {
+                StartEpreuve();
+            }
+            else
+            {
+                SwitchEpreuve();
+            }
         }
     }
 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d1dd19c7f126248bd51557a9397570, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  phrase: "Nous avons le plaisir de vous pr\xE9senter, chers spectateurs, une version
+    alternative de la fin de Ph\xE8dre.\r\nAyant \xE9t\xE9 confront\xE9e \xE0 des
+    d\xE9ceptions amoureuses sans \xE9quivalent et \xE0 la tragique perte de son
+    cher Hippolyte, elle a choisi de ne pas mettre fin \xE0 ses jours, mais de tenter
+    de le faire rena\xEEtre. \r\nJe vous prie de manifester votre enthousiasme par
+    une salve d'applaudissements en faveur de nos talentueux jeunes acteurs !"
+  missions: 
+  time: 25
