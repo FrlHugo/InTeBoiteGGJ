@@ -53,7 +53,7 @@ namespace ActivateItems
                     if (! Activated)
                     {
                         m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
-                        if (m_Rideauxanimator) m_Rideauxanimator.SetTrigger("open");
+                        if (m_Rideauxanimator) m_Rideauxanimator.SetTrigger("open");  
                         Debug.Log("No");
                         Activated = true;
                         narrateurManager.game = true;

@@ -9,15 +9,20 @@ namespace PublicManaged
     {
 
         public KeyCode grabKey;
+        public KeyCode grabkey2;
         public GameObject publicobject;
 
         public void Update()
         {
             if (Input.GetKey(grabKey))
             {
-                publicobject.GetComponent<PublicManager>().React(false, 2);
+                publicobject.GetComponent<PublicManager>().React(true, 2);
             }
 
+            if (Input.GetKey(grabkey2))
+            {
+                publicobject.GetComponent<PublicManager>().React(false, 2);
+            }
         }
     }
 }
