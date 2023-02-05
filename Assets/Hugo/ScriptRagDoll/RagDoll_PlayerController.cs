@@ -25,12 +25,7 @@ public class RagDoll_PlayerController : MonoBehaviour
         {
             Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput);
             hips.velocity = direction * speed;
-            transform.forward = direction;
-            animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
+            this.transform.forward = direction;
         }
     }
 }
