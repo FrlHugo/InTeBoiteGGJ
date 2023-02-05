@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class RagDoll_PlayerController : MonoBehaviour
@@ -24,42 +20,49 @@ public class RagDoll_PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.Z))
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+
+        if (verticalInput != 0)
         {
-            if(Input.GetKey(KeyCode.LeftShift))
-            {
-                hips.AddForce(hips.transform.forward * speed * 1.5f);
-
-            }
-            else
-            {
-                hips.AddForce(hips.transform.forward * speed);
-            }
-           
+            hips.AddForce(hips.transform.forward * speed);
         }
-
-        if (Input.GetKey(KeyCode.Q))
+        
+        if (horizontalInput != 0)
         {
-            hips.AddForce(-hips.transform.right * strafeSpeed);
+            hips.AddForce(-hips.transform.forward * strafeSpeed);
         }
-
-        if (Input.GetKey(KeyCode.S))
+        /*
+        if (verticalInput < 0)
         {
             hips.AddForce(-hips.transform.forward * speed);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (horizontalInput > 0)
         {
             hips.AddForce(hips.transform.right * strafeSpeed);
         }
-
-        if(Input.GetKey(KeyCode.Space))
+        */
+        if (Input.GetKey(KeyCode.Space))
         {
-            if(isGrounded)
+            if (isGrounded)
             { 
                 hips.AddForce(new Vector3(0, jumpForce, 0));
                 isGrounded = false;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (hips.velocity.x > 0.5f || hips.velocity.x < -0.5f || hips.velocity.z > 0.5f || hips.velocity.z < -0.5f)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }

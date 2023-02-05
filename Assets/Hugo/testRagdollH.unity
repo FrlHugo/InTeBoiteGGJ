@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &761985338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826105770678451039, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
+  m_PrefabInstance: {fileID: 5218751152412354790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &876705642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8789447511714095957, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
@@ -522,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5723885858133043708, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.94
+      value: 1.8726888
       objectReference: {fileID: 0}
     - target: {fileID: 5723885858133043708, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -530,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5723885858133043708, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.75
+      value: -24.71773
       objectReference: {fileID: 0}
     - target: {fileID: 5723885858133043708, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -598,6 +603,24 @@ PrefabInstance:
     - {fileID: 2136695364070570676, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
     - {fileID: 7143837308816719595, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
+--- !u!95 &5218751152412354791 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8564941891956510070, guid: 18ae83dddf6d8f74d86e5c9bf8e1fe8e, type: 3}
+  m_PrefabInstance: {fileID: 5218751152412354790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5218751152412354794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761985338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bcd4c5e3fd9174fab883cad9d696d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
 --- !u!1001 &5952822404470754583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,6 +924,10 @@ PrefabInstance:
       propertyPath: m_AngularYZDrive.positionSpring
       value: 1304
       objectReference: {fileID: 0}
+    - target: {fileID: 6962212391157612870, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 5218751152412354791}
     - target: {fileID: 6978448539906718911, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
       propertyPath: m_AngularXDrive.positionSpring
       value: 791
@@ -995,4 +1022,5 @@ PrefabInstance:
     - {fileID: 5210694998625029760, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
     - {fileID: 2135020220110462714, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
     - {fileID: 7427036896230334816, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
+    - {fileID: 6182578558862128577, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 666c58fb952951e44970ec842b3653b3, type: 3}
