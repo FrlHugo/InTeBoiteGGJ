@@ -8,9 +8,12 @@ namespace ActivateItems
     {
 
         [SerializeField] private bool StartOpen;
+        private bool Activated;
+
         [SerializeField] private Transform m_MovingPart;
         [SerializeField] private GameObject m_LinkedObject;
         [SerializeField] private Animator m_Myanimator;
+        [SerializeField] private Animator m_Rideauxanimator;
         [SerializeField] private Collider m_MyCollider;
      // Start is called before the first frame update
      void Start()
@@ -35,12 +38,17 @@ namespace ActivateItems
                 if (m_MovingPart.localEulerAngles.z >= 35 && m_MovingPart.localEulerAngles.z <= 45)
                 {
                     Debug.Log("yes");
-
+                    Activated = false;
                 }
                 else if (m_MovingPart.localEulerAngles.z >= 315 && m_MovingPart.localEulerAngles.z <= 320)
                 {
-                    m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
-                    Debug.Log("No");
+                    if (! Activated)
+                    {
+                        m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
+                        m_Rideauxanimator.SetTrigger("open");
+                        Debug.Log("No");
+                        Activated = true;
+                    }
                 }
 
                 m_Myanimator.enabled = false;
