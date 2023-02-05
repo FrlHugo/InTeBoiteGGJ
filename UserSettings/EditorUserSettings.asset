@@ -15,13 +15,16 @@ EditorUserSettings:
       value: 15011a52561b59
       flags: 0
     Coherence.CoherenceSyncSchemasDirty:
-      value: 53
+      value: 52
       flags: 0
     Coherence.GatherOnBake:
       value: 52
       flags: 0
     Coherence.Package.LastInstallation:
       value: 531f05564b0d
+      flags: 0
+    Coherence.Settings.ActiveSchemas.Hash:
+      value: 05570404500c51035d595f2615210a1345414e72782e20337c781b66bbb86d69
       flags: 0
     Coherence.Settings.Email:
       value: 055e4603091b014e0a012c251d22561c58141727
@@ -30,7 +33,7 @@ EditorUserSettings:
       value: 0057525056475c59025f04321d224d1218450a7a
       flags: 0
     Coherence.Settings.UserLoginEncryptedToken:
-      value: 044471034a5d5e51355c052b43717527453c10063b3b3667002c4500e9c37b1df8e621c2cf090632033bfa69111a542ff9010827a3253932432cf85c2be5270a0692139016eb3037920a4ff9dc0efbeef4daf3c1f2e7e2e0f4caaca3c4f6eaffc7e5f3d19cfcaee3bb86f6e7aceee2d4cc9ca0c3eafffbcc9c8af8d7efc0f0f2eee3a4eff6afcdd0d6bab09f96bd96f0a582aa989280cb9b87b794e02b81a5636c424093aeb6a6bab49026b17c5786c35546ab5a60d2bea4c6c24da7bca59cac68b481ae169f99b64ccb5993464c6868435c4558524f3231
+      value: 
       flags: 0
     RecentlyUsedSceneGuid-0:
       value: 5708575454005e0c09560a2112220f444f151e782a7172312f7a4e36b0e4376a
