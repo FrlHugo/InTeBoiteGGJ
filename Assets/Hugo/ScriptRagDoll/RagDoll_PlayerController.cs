@@ -26,10 +26,7 @@ public class RagDoll_PlayerController : MonoBehaviour
         if (horizontalInput > 0 || horizontalInput < 0 || verticalInput > 0 || verticalInput < 0)
         {
             hips.velocity = direction * speed;
-            foreach (Transform limb in player)
-            {
-                //limb.forward = direction;
-            }
+            //transform.forward = direction;
             animator.SetBool("isWalking", true);
         }
         else
