@@ -21,12 +21,13 @@ public class RagDoll_PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput);
+        Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
         if (horizontalInput > 0 || horizontalInput < 0 || verticalInput > 0 || verticalInput < 0)
         {
             hips.velocity = direction * speed;
-            //transform.forward = direction;
+
+           // transform.forward = direction;
             animator.SetBool("isWalking", true);
         }
         else
