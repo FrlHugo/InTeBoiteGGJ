@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62b984929e764d4786eaa0c974c2a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &7793699249633662681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +190,7 @@ MonoBehaviour:
     archetypeName: M_Pepatoes_19914e9baa5282848b7dfb54e056fe69
     GeneratesArchetypeDefinition: 1
   InterpolationLocation: 1
-  bakedScriptType: Coherence.Generated.CoherenceSyncM_Pepatoes_id2, Assembly-CSharp
+  bakedScriptType: Coherence.Generated.CoherenceSyncM_Pepatoes_id1, Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
   authorityTransferType: 2
