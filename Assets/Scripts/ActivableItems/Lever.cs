@@ -10,8 +10,10 @@ namespace ActivateItems
         [SerializeField] private bool StartOpen;
         [SerializeField] private Transform m_MovingPart;
         [SerializeField] private GameObject m_LinkedObject;
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private Animator m_Myanimator;
+        [SerializeField] private Collider m_MyCollider;
+     // Start is called before the first frame update
+     void Start()
         {
             if (StartOpen)
             {
@@ -26,10 +28,23 @@ namespace ActivateItems
         // Update is called once per frame
         void Update()
         {
-             if (m_MovingPart.localEulerAngles.z >= 35 && m_MovingPart.localEulerAngles.z <= 45)
+           
+
+            if (StartOpen)
             {
-                Debug.Log("yes");
-                m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
+                if (m_MovingPart.localEulerAngles.z >= 35 && m_MovingPart.localEulerAngles.z <= 45)
+                {
+                    Debug.Log("yes");
+
+                }
+                else if (m_MovingPart.localEulerAngles.z >= 315 && m_MovingPart.localEulerAngles.z <= 320)
+                {
+                    m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
+                    Debug.Log("No");
+                }
+
+                m_Myanimator.enabled = false;
+                m_MyCollider.isTrigger = false;
             }
         }
     }
