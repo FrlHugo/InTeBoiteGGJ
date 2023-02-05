@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d1dd19c7f126248bd51557a9397570, type: 3}
+  m_Name: Toges
+  m_EditorClassIdentifier: 
+  phrase: "En tant que bon citoyen ath\xE9nien, nos quatre \xE2mes se pr\xE9parent
+    et s'habillent avec soin afin de participer aux prestigieuses Panath\xE9n\xE9es.
+    \r\nParmi cette assembl\xE9e, une femme se distingue par sa singularit\xE9, notre
+    somptueuse et ravissante Ph\xE8dre. Sa silhouette ne trompe personne, elle est
+    incontestablement la compagne de Th\xE9s\xE9e, comme le sugg\xE8re sa coiffure
+    sophistiqu\xE9e."
+  missions: 00000000
+  time: 0

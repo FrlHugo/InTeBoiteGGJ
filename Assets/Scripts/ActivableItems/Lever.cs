@@ -6,6 +6,7 @@ namespace ActivateItems
 {
     public class Lever : MonoBehaviour
     {
+        private NarrateurManager narrateurManager;
 
         [SerializeField] private bool StartOpen;
         private bool Activated;
@@ -18,6 +19,8 @@ namespace ActivateItems
      // Start is called before the first frame update
      void Start()
         {
+            narrateurManager = GameObject.FindObjectOfType<NarrateurManager>();
+
             if (StartOpen)
             {
                 m_MovingPart.SetLocalPositionAndRotation(m_MovingPart.position, new Quaternion(0, 0, 0, 40));
@@ -48,6 +51,8 @@ namespace ActivateItems
                         m_Rideauxanimator.SetTrigger("open");
                         Debug.Log("No");
                         Activated = true;
+                        narrateurManager.game = true;
+                        narrateurManager.panel.SetActive(true);
                     }
                 }
 
