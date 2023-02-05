@@ -12,6 +12,7 @@ public class PickUpToge : MonoBehaviour
     public GameObject dernierTriggerRamasser;
     public GameObject nouveauTrigger;
 
+    public NarrateurManager nm;
 
     public bool isWearingAToge;
     // Start is called before the first frame update
@@ -22,11 +23,12 @@ public class PickUpToge : MonoBehaviour
         visuelPeruque.SetActive(false);
         visuelNez.SetActive(false);
         dernierTriggerRamasser = null;
+        nouveauTrigger = null;
+        nm = FindObjectOfType<NarrateurManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Bonsoir(Collider other)
     {
-        print("COLLISION");
 
         if (other.gameObject.tag == "Toge" || other.gameObject.tag == "Peruque" || other.gameObject.tag == "Nez")
         {
@@ -41,6 +43,18 @@ public class PickUpToge : MonoBehaviour
             {
                 isWearingAToge = true;
                 visuelToge.SetActive(true);
+                if(nm.index == 1 || nm.index == 4)
+                {
+                    for (int i = 0; i< nm.epreuves[nm.index].Count; i++)
+                    {
+                        if (!nm.epreuves[nm.index][i])
+                        {
+                            nm.epreuves[nm.index][i] = true;
+                            break;
+                        }
+                    }
+                }
+             
 
             }
 
@@ -56,18 +70,27 @@ public class PickUpToge : MonoBehaviour
                 visuelNez.SetActive(true);
             }
 
-            nouveauTrigger.GetComponent<EtatTriggerZone>().pickUp = false;
+            nouveauTrigger.GetComponent<EtatTriggerZone>().pickUp = true;
 
-            dernierTriggerRamasser.GetComponent<EtatTriggerZone>().pickUp = false;
+            if(dernierTriggerRamasser != null)
+            {
+                dernierTriggerRamasser.GetComponent<EtatTriggerZone>().pickUp = false;
 
-            dernierTriggerRamasser.SetActive(true);
+                dernierTriggerRamasser.SetActive(true);
 
-            dernierTriggerRamasser = nouveauTrigger;
+                dernierTriggerRamasser = nouveauTrigger;
 
-            dernierTriggerRamasser.SetActive(false);
+                dernierTriggerRamasser.SetActive(false);
 
-            nouveauTrigger = null;
+                nouveauTrigger = null;
 
+            }
+            else
+            {
+                dernierTriggerRamasser = nouveauTrigger;
+                dernierTriggerRamasser.SetActive(false);
+
+            }
         }
 
     }
