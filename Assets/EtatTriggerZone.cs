@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class EtatTriggerZone : MonoBehaviour
@@ -16,5 +17,10 @@ public class EtatTriggerZone : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.gameObject.name);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class PickUpToge : MonoBehaviour
@@ -25,6 +26,8 @@ public class PickUpToge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("COLLISION");
+
         if (other.gameObject.tag == "Toge" || other.gameObject.tag == "Peruque" || other.gameObject.tag == "Nez")
         {
             nouveauTrigger = other.gameObject;
