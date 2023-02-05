@@ -8,8 +8,9 @@ public class RagDoll_PlayerController : MonoBehaviour
 
     public Animator animator;
 
+    public Transform player;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         hips = GetComponent<Rigidbody>();
@@ -20,12 +21,20 @@ public class RagDoll_PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput);
 
         if (horizontalInput > 0 || horizontalInput < 0 || verticalInput > 0 || verticalInput < 0)
         {
-            Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput);
             hips.velocity = direction * speed;
-            this.transform.forward = direction;
+            foreach (Transform limb in player)
+            {
+                //limb.forward = direction;
+            }
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }
