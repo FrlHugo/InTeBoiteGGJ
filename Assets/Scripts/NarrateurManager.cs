@@ -6,7 +6,7 @@ using UnityEngine;
 public class NarrateurManager : MonoBehaviour
 {
     public List<SO_Narration> epreuves;
-    private int index = 0;
+    public int index = 0;
 
     public TextMeshProUGUI epreuveText;
 
