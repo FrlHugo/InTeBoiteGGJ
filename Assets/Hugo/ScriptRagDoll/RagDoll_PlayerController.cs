@@ -25,6 +25,11 @@ public class RagDoll_PlayerController : MonoBehaviour
 
             Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput);
             hips.velocity = direction * speed;
+
+        if (direction != Vector3.zero)
+        {
             this.transform.forward = direction;
+
+        }
     }
 }

@@ -16,13 +16,6 @@ public class CopyMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!mirror)
-        {
-            cj.targetRotation = targetLimb.rotation;
-        }
-        else
-        {
-            cj.targetRotation = Quaternion.Inverse(targetLimb.rotation);    
-        }
+        this.GetComponent<Rigidbody>().MoveRotation(cj.transform.rotation);
     }
 }
