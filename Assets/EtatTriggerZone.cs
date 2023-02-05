@@ -21,7 +21,7 @@ public class EtatTriggerZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Corps"))
         {
             PickUpToge player = other.GetComponentInParent<IgnoreCollisions>().gameObject.GetComponent<PickUpToge>();
             player.Bonsoir(gameObject.GetComponent<Collider>());

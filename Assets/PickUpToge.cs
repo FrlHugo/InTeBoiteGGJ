@@ -29,8 +29,9 @@ public class PickUpToge : MonoBehaviour
 
     public void Bonsoir(Collider other)
     {
-
-        if (other.gameObject.tag == "Toge" || other.gameObject.tag == "Peruque" || other.gameObject.tag == "Nez")
+        if (nm.index == 1 || nm.index == 2 || nm.index == 4)
+        {
+            if (other.gameObject.tag == "Toge" || other.gameObject.tag == "Peruque" || other.gameObject.tag == "Nez")
         {
             nouveauTrigger = other.gameObject;
 
@@ -43,13 +44,12 @@ public class PickUpToge : MonoBehaviour
             {
                 isWearingAToge = true;
                 visuelToge.SetActive(true);
-                if(nm.index == 1 || nm.index == 4)
-                {
-                    for (int i = 0; i< nm.epreuves[nm.index].Count; i++)
+
+                    for (int i = 0; i < nm.epreuves[nm.index].missions.Count; i++)
                     {
-                        if (!nm.epreuves[nm.index][i])
+                        if (!nm.epreuves[nm.index].missions[i])
                         {
-                            nm.epreuves[nm.index][i] = true;
+                            nm.epreuves[nm.index].missions[i] = true;
                             break;
                         }
                     }

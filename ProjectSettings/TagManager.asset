@@ -9,6 +9,7 @@ TagManager:
   - Toge
   - Peruque
   - Nez
+  - Corps
   layers:
   - Default
   - TransparentFX

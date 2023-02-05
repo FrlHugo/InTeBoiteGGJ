@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class EventManager : MonoBehaviour
 {
-    GameObject[] players;
+    public GameObject[] players;
     public int playerNumber;
 
     [SerializeField] private Animator LeverAnimator1;

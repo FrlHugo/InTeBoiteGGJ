@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3230,7 +3230,7 @@ GameObject:
   - component: {fileID: 541035650}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5715,6 +5715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83ff5f5ec9224cb4b95e6191526de14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabKey: 0
+  canGrab: 0
+  animator: {fileID: 0}
 --- !u!65 &938107800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6516,7 +6519,7 @@ GameObject:
   - component: {fileID: 1016720948}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6760,6 +6763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83ff5f5ec9224cb4b95e6191526de14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabKey: 0
+  canGrab: 0
+  animator: {fileID: 0}
 --- !u!65 &1052860699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6845,6 +6851,7 @@ MonoBehaviour:
   visuelNez: {fileID: 541035648}
   dernierTriggerRamasser: {fileID: 0}
   nouveauTrigger: {fileID: 0}
+  nm: {fileID: 0}
   isWearingAToge: 0
 --- !u!1 &1062589082
 GameObject:
@@ -11064,6 +11071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41527f4b821639a438d49a731538a3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   playerNumber: 0
   LeverAnimator1: {fileID: 1913799289}
   timer: 0
@@ -11097,7 +11105,7 @@ GameObject:
   - component: {fileID: 1743162074}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11287,11 +11295,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3627786236304890240, guid: ce16ea156b0434b469594785f889bc58, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3933208062201415282, guid: ce16ea156b0434b469594785f889bc58, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7174554752898493298, guid: ce16ea156b0434b469594785f889bc58, type: 3}
       propertyPath: m_RootOrder
@@ -13975,6 +13983,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 92ebae84828fe8b4ab8e1095032158ef, type: 2}
   - {fileID: 11400000, guid: 03c3a6e69a40a654e861341d03d37cb0, type: 2}
   - {fileID: 11400000, guid: 638c125f3a8864a43b9e761d1d4e965d, type: 2}
+  index: 0
   epreuveText: {fileID: 5915602034912691559}
   panel: {fileID: 5915602034626611417}
   game: 0
