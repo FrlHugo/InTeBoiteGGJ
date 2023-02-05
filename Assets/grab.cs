@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class grab : MonoBehaviour
+public class Grab : MonoBehaviour
 {
     private bool hold;
     public KeyCode grabKey;
     public bool canGrab;
+    public Animator animator;
 
     void Update()
     {
@@ -14,10 +13,12 @@ public class grab : MonoBehaviour
         {
             if (Input.GetKey(grabKey))
             {
+                animator.SetBool("isGrabbing", true);
                 hold = true;
             }
             else
             {
+                animator.SetBool("isGrabbing", false);
                 hold = false;
                 Destroy(GetComponent<FixedJoint>());
             }
@@ -29,6 +30,7 @@ public class grab : MonoBehaviour
         if (hold && col.transform.tag != "Player")
         {
             Rigidbody rb = col.transform.GetComponent<Rigidbody>();
+
             if (rb != null)
             {
                 FixedJoint fj = transform.gameObject.AddComponent(typeof(FixedJoint)) as FixedJoint;
