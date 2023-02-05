@@ -15,11 +15,6 @@ public class ZoneTrigger : MonoBehaviour
         narrateurManager = FindObjectOfType<NarrateurManager>();
     }
 
-    private void Update()
-    {
-        
-    }
-
 
     private void OnTriggerEnter(Collider other)
     {

@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 866977682}
   m_Layer: 0
   m_Name: Lever
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,6 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartOpen: 1
   m_MovingPart: {fileID: 2673584124490840170}
+  m_LinkedObject: {fileID: 0}
+  m_Myanimator: {fileID: 0}
+  m_Rideauxanimator: {fileID: 0}
+  m_MyCollider: {fileID: 0}
 --- !u!1 &2673584125911421937
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class NarrateurManager : MonoBehaviour
     public float timer = 0f;
     private bool start = false;
 
+    public List<GameObject> togesTrigger;
+    public int togesIndex;
+
 
 
     void Start()
@@ -36,6 +39,22 @@ public class NarrateurManager : MonoBehaviour
             else
             {
                 SwitchEpreuve();
+
+                foreach (GameObject go in togesTrigger)
+                {
+                    if (go.GetComponent<EtatTriggerZone>().pickUp)
+                    {
+                        togesIndex++;
+                    }
+                }
+
+                if (togesIndex == 4)
+                {
+                    for (int i = 0; i < epreuves[1].missions.Count; i++)
+                    {
+                        epreuves[1].missions[i] = false;
+                    }
+                }
             }
         }
     }
