@@ -16,6 +16,11 @@ namespace ActivateItems
         [SerializeField] private Animator m_Myanimator;
         [SerializeField] private Animator m_Rideauxanimator;
         [SerializeField] private Collider m_MyCollider;
+
+        public bool isTheSecond;
+
+
+
      // Start is called before the first frame update
      void Start()
         {
@@ -48,7 +53,7 @@ namespace ActivateItems
                     if (! Activated)
                     {
                         m_LinkedObject.GetComponent<ActivableItem>().TriggerActivation();
-                        m_Rideauxanimator.SetTrigger("open");
+                        if (m_Rideauxanimator) m_Rideauxanimator.SetTrigger("open");
                         Debug.Log("No");
                         Activated = true;
                         narrateurManager.game = true;

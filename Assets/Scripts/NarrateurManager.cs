@@ -19,11 +19,15 @@ public class NarrateurManager : MonoBehaviour
     public List<GameObject> togesTrigger;
     public int togesIndex;
 
+    public EventManager em;
+    public bool test = false;
+
 
 
     void Start()
     {
         SwitchText(epreuves[index].phrase);
+        em = FindObjectOfType<EventManager>();
     }
 
     void Update()
@@ -39,6 +43,23 @@ public class NarrateurManager : MonoBehaviour
             else
             {
                 SwitchEpreuve();
+
+                if (index == 3 && !test)
+                {
+                    int rand = Random.Range(0, 4);
+
+                    for (int i = 0; i < em.players.Length; i++)
+                    {
+                        if (em.players[i] = em.players[rand])
+                        {
+                            print("sjlkdghnls");
+                            em.players[i].GetComponentInChildren<PickUpToge>().visuelNez.SetActive(true);
+                        }
+
+                    }
+
+                    test = true;
+                }
 
                 foreach (GameObject go in togesTrigger)
                 {
